@@ -34,6 +34,8 @@ html, body {
 
 /* styling for a single page */
 .page {
+    min-height: 100vh;
+    padding: 2rem 1rem;
 }
 
 /* styling for elements which should center their content*/
@@ -41,7 +43,8 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    align-content: center;
+    /* justify-content: center;*/
 }
 
 /* prevents word wrapping */
@@ -56,7 +59,5 @@ html, body {
     background-size: cover;
     width: 3rem;
     height: 3rem;
-    border-radius: 3rem;
-    border: 0.3rem solid black;
-    margin: 0.5rem;
+    cursor: pointer;
 }

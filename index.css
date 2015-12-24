@@ -1,6 +1,10 @@
+#home {
+    background-color: rgb(240, 240, 240);
+}
+
 /* container for elements with restricting width */
 #home > article {
-    margin: auto;
+    margin: 0 auto;
     max-width: 90%;
     width: 50rem;
     text-align: center;

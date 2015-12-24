@@ -5,15 +5,16 @@
         <link rel="stylesheet" type="text/css" href="content.css">
         <link rel="stylesheet" type="text/css" href="navigation.css">
         <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="publications.css">
         <link rel="stylesheet" type="text/css" href="media.css">    
     </head>
     <body>
-        <div id="home" class = "page">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="publications.html">Publications</a>
-                <a href="#resume">Resume</a>
-            </nav>
+        <nav>
+            <a onclick="Scroll.ScrollToElementById('home')">Home</a>
+            <a onclick="Scroll.ScrollToElementById('publications')">Publications</a>
+            <a>Resume</a>
+        </nav>
+        <div id="home" class = "page center">
             <article class="center">
                 <div id="profilepicture"></div>
                 <div id="introduction">
@@ -27,6 +28,15 @@
                     The focus of my research is developing new algorithms to reduce the noise in global illumination algorithms.
                 </div>
             </article>
+            <div class="arrow-down" onclick="Scroll.ScrollToElementById('publications')">
+            </div>
         </div>
+        <div id="publications" class = "page">
+            <article id = "publications-container">
+                <header>Publications</header>
+            </article>
+        </div>
+        <script src="publications.js"></script>
+        <script src="scroll.js"></script>
     </body>
 </html>
