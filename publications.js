@@ -15,7 +15,7 @@ var Publications = (function () {
         var result = this.lastName + " " + this.firstName;
         
         if (this.webPage) {
-            return "<a href='" + this.webPage + "'>" + result + "</a>";
+            return "<a class = 'author' href='" + this.webPage + "'>" + result + "</a>";
         } else {
             return result;
         }
@@ -108,9 +108,21 @@ var Bjorn = new Publications.Author("Bj&ouml;rn", "Engelen", null);
 
 var BELD13PVEDI = new Publications.Paper("Probabilistic Visibility Evaluation for Direct Illumination",
                                         [Niels, Bjorn, Ares, Philip],
-                                         "Computer Graphics Forum 32(4) (Proceedings of Eurographics Symposium on Rendering 2013).",
+                                         "Computer Graphics Forum (Proceedings of the 19th Eurographics Symposium on Rendering), 32(4):39-47, July 2013.",
                                         "images/BELD13PVEDI_thumbnail.jpg");
-console.log(BELD13PVEDI);
+
+var BLD14PVEGP = new Publications.Paper("Probabilistic Visibility Evaluation using Geometry Proxies",
+                                        [Niels, Ares, Philip],
+                                         "Computer Graphics Forum (Proceedings of the 20th Eurographics Symposium on Rendering), 33(4):143-152, July 2014.",
+                                        "images/BLD14PVEGP_thumbnail.jpg");
+
+var MBD15EVHFKUTR = new Publications.Paper("Efficient visibility heuristics for kd-trees using the RTSAH",
+                                        [Matthias, Niels, Philip],
+                                         "Eurographics Symposium on Rendering - Experimental Ideas & Implementations, July 2015.",
+                                        "images/MBD15EVHFKUTR_thumbnail.jpg");
 
 var publicationContainer = document.getElementById("publications-container");
+MBD15EVHFKUTR.add(publicationContainer);
+BLD14PVEGP.add(publicationContainer);
 BELD13PVEDI.add(publicationContainer);
+

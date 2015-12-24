@@ -56,6 +56,10 @@ html {
     margin-bottom: 1.5rem;
 }
 
+.author {
+    text-decoration: none;
+}
+
 .location {
     font-family: raleway-regular;
     font-size: 1.5rem;
