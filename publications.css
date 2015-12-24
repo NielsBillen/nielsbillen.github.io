@@ -1,0 +1,77 @@
+html {
+    background-color: skyblue;
+}
+
+#publications > nav {
+    background-color: skyblue;
+}
+
+#publications > nav > a {
+    color: white;
+}
+
+#publications > nav > a:hover {
+    border-bottom: 0.2rem solid white;
+}
+
+#publications > article {
+    margin: 2rem auto;
+    
+    width: 80rem;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#publications > article > header {
+    color: white;
+    font-family: raleway-bold;
+    font-size: 5rem;
+}
+
+.publication {
+    /*background-color: #ffbf5d;*/
+    background-color:white;
+    color: black;
+    /*text-shadow: 1px 1px 4px gray;*/
+    border-radius: 0.2rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    
+    display: flex;
+    box-shadow: 0.2rem 0.2rem 0.4rem gray;
+
+}
+
+.title {
+    font-family: raleway-bold;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.authors {
+    font-family: raleway-regular;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.location {
+    font-family: raleway-regular;
+    font-size: 1.5rem;
+}
+
+.publication-thumbnail {
+    width: 16rem;
+    height: 16rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0.4rem solid rgb(230,230,230);
+    box-shadow: 0.2rem 0.2rem 0.4rem gray;
+}
+
+.publication-data {
+    flex: 1;
+    padding: 1rem;
+}

@@ -1,0 +1,63 @@
+/*--------------------------------------------
+ * Make the content scalable
+ *--------------------------------------------*/
+
+@media screen and (max-width: 60rem) {
+    html {
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-height: 58rem) {
+    html {
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-height: 52rem) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-height: 46rem) {
+    html {
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-height: 40rem) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-height: 34rem) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 56rem) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 48rem) {
+    html {
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 44rem) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-width: 40rem) {
+    html {
+        font-size: 50%;
+    }
+}

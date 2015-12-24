@@ -1,0 +1,44 @@
+/* container for elements with restricting width */
+#home > article {
+    margin: auto;
+    max-width: 90%;
+    width: 50rem;
+    text-align: center;
+}
+
+/* styling for the profile picture */
+#profilepicture {
+    width: 16rem;
+    height: 16rem;
+    
+    background-image: url("images/profilepicture.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    margin: 1rem;
+
+    border-radius: 16rem;
+    border: 0.5rem solid skyblue;
+    
+    box-shadow: 0.2rem 0.3rem 0.5rem 0.1rem lightgray;
+}
+
+#introduction {
+    font-family: raleway-bold;
+    font-size: 5rem;
+}
+
+#title {
+    font-family: raleway-thin;
+    font-size: 2rem;
+    color: slategray;
+}
+
+#workdescription {
+    font-family: raleway-regular;
+    font-size: 1.75rem;
+    text-align: justify;
+    margin: 4rem 0rem;
+    color: darkslategray;
+}

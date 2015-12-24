@@ -1,0 +1,29 @@
+/* navigation */
+nav {    
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
+    
+    color: black;
+    background-color: white;
+    
+    font-size: 2rem;
+    font-family: raleway-thin;
+    
+    padding: 1rem;
+}
+
+/* styling of the navigation element */
+nav > a  {
+    margin: 0rem 1rem;
+    box-sizing: content-box;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 0.2rem solid transparent;
+}
+
+nav > a:hover {
+    color: skyblue;
+    border-bottom: 0.2rem solid skyblue;
+}

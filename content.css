@@ -1,0 +1,62 @@
+/*-----------------------------------------------------------------------------
+ *
+ * CSS styling for the home page
+ *
+ *---------------------------------------------------------------------------*/
+
+/* font definition for bold fonts */
+@font-face {
+    font-family: raleway-bolder;
+    src: url("fonts/raleway/Raleway-Bold.ttf");
+}
+
+@font-face {
+    font-family: raleway-bold;
+    src: url("fonts/raleway/Raleway-Bold.ttf");
+}
+
+/* font definition for regular fonts */
+@font-face {
+    font-family: raleway-regular;
+    src: url("fonts/raleway/Raleway-ExtraLight.ttf");
+}
+
+/* font definition for thin fonts */
+@font-face {
+    font-family: raleway-thin;
+    src: url("fonts/raleway/Raleway-Thin.ttf");
+}
+
+/* styling for the body */
+html, body {
+    margin:0;
+}
+
+/* styling for a single page */
+.page {
+}
+
+/* styling for elements which should center their content*/
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* prevents word wrapping */
+.nowrap {
+    white-space: nowrap;
+}
+
+/* styling for down-pointing arrows */
+.arrow-down {
+    background-image: url("images/arrow-down.svg");
+    background-position: center;
+    background-size: cover;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    border: 0.3rem solid black;
+    margin: 0.5rem;
+}
