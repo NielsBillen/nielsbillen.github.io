@@ -40,7 +40,7 @@ var Scroll = (function () {
                     setTimeout(my.PerformScroll, 1);
                 }
             } else {
-                window.scrollTo(0, scrollTo);
+                window.scrollBy(0, scrollTo - currentTop);
                 canScroll = true;
             }
         } else if (currentTop > scrollTo) {
@@ -51,7 +51,7 @@ var Scroll = (function () {
                     setTimeout(my.PerformScroll, 1);
                 }
             } else {
-                window.scrollTo(0, scrollTo);
+                window.scrollTo(0, currentTop - scrollTo);
                 canScroll = true;
             }
         } else {
