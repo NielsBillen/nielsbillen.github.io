@@ -34,14 +34,12 @@
 }
 
 #title {
-    font-family: raleway-regular;
     font-size: 2rem;
     color: slategray;
 }
 
 #workdescription {
-    font-family: raleway-regular;
-    font-size: 1.75rem;
+    font-size: 2rem;
     text-align: justify;
     margin: 4rem 0rem;
     color: darkslategray;

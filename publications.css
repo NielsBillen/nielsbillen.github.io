@@ -18,6 +18,7 @@ article {
 
 .publication {
     display: flex;
+    align-items: center;
 
     background-color: white;
     color: black;
@@ -51,14 +52,16 @@ article {
 }
 
 .publication-thumbnail {
-    width: 16rem;
-    height: 16rem;
+    width: 20vmin;
+    height: 20vmin;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border: 0.4rem solid rgb(230,230,230);
     box-shadow: 0.2rem 0.2rem 0.4rem gray;
 }
+
+
 
 .publication-data {
     flex: 1;

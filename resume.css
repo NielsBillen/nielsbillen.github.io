@@ -29,3 +29,11 @@ td {
     padding: 0.5rem 1rem;
     vertical-align: top;
 }
+
+table {
+    width: 100%;
+}
+
+table > tbody > tr > td:first-child {
+    width: 20%;
+}

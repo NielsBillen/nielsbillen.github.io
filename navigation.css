@@ -1,47 +1,49 @@
-/* navigation */
+/* 
+ * add a margin to the top of the body for the fixed position navigation bar
+ */
 body {
     margin-top: 4rem;
 }
 
+/* styling for the navigation bar */
 nav {
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
+    height: 4rem;
     
     display: flex;
-    align-items: center;
-    align-content: center;
     justify-content: flex-end;
     
-    color: black;
     background-color: white;
     
-    font-size: 2rem;
-    font-family: raleway-regular;
-        
     border-bottom: 1px solid rgb(211, 211, 211);
 }
 
 /* styling of the navigation element */
 nav > a  {
-    height: 4rem;
     margin: 0rem 1rem;
+    height: 100%;
+    font-size: 2.5rem;
     
     box-sizing: border-box;
     text-decoration: none;
     text-align: center;
     
+    color: darkslategray;
+    
     display: flex;
     align-items: center;
     
-    border-top: 0.3rem solid transparent;
-    border-bottom: 0.3rem solid transparent;
+    border-top: 0.4rem solid transparent;
+    border-bottom: 0.4rem solid transparent;
+    
     cursor: pointer;
 }
 
 nav > a:hover {
     color: skyblue;
-    border-top: 0.3rem solid transparent;
-    border-bottom: 0.3rem solid skyblue;
+    border-top: 0.4rem solid transparent;
+    border-bottom: 0.4rem solid skyblue;
 }
