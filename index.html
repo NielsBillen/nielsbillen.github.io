@@ -1,42 +1,173 @@
-<html lang="en_GB">
+<html lang = "en_GB">
     <head>
         <!-- style sheet inclusions -->
         <title>Niels Billen - Home</title>
-        <link rel="stylesheet" type="text/css" href="content.css">
-        <link rel="stylesheet" type="text/css" href="navigation.css">
-        <link rel="stylesheet" type="text/css" href="index.css">
-        <link rel="stylesheet" type="text/css" href="publications.css">
-        <link rel="stylesheet" type="text/css" href="media.css">    
+        <link rel = "stylesheet" type = "text/css" href = "content.css">
+        <link rel = "stylesheet" type = "text/css" href = "navigation.css">
+        <link rel = "stylesheet" type = "text/css" href = "index.css">
+        <link rel = "stylesheet" type = "text/css" href = "publications.css">
+        <link rel = "stylesheet" type = "text/css" href = "resume.css">
+        <link rel = "stylesheet" type = "text/css" href = "media.css">    
     </head>
     <body>
         <nav>
-            <a onclick="Scroll.ScrollToElementById('home')">Home</a>
-            <a onclick="Scroll.ScrollToElementById('publications')">Publications</a>
-            <a>Resume</a>
+            <a onclick = "Scroll.ScrollToElementById('home')">Home</a>
+            <a onclick = "Scroll.ScrollToElementById('publications')">Publications</a>
+            <a onclick = "Scroll.ScrollToElementById('resume')">Resume</a>
         </nav>
-        <div id="home" class = "page center">
-            <article class="center">
-                <div id="profilepicture"></div>
-                <div id="introduction">
+        <div id = "home" class = "page center">
+            <article class = "center">
+                <div id = "profilepicture"></div>
+                <div id = "introduction">
                     Hi, I am Niels Billen
                 </div>
-                <div id="title">
+                <div id = "title">
                     Ph.D Candidate at the <span class="nowrap">KU Leuven</span> University
                 </div>
-                <div id="workdescription">
+                <div id = "workdescription">
                     I am a software engineer, currently pursuing a Ph.D at the <span class="nowrap">KU Leuven</span> University.
                     The focus of my research is developing new algorithms to reduce the noise in global illumination algorithms.
                 </div>
             </article>
-            <div class="arrow-down" onclick="Scroll.ScrollToElementById('publications')">
+            <div class = "arrow-down" onclick = "Scroll.ScrollToElementById('publications')">
             </div>
         </div>
-        <div id="publications" class = "page">
+        <div id = "publications" class = "page">
             <article id = "publications-container">
                 <header>Publications</header>
             </article>
         </div>
-        <script src="publications.js"></script>
-        <script src="scroll.js"></script>
+        <div id = "resume" class = "page">
+            <article>
+                <header>Resume</header>
+                
+                <div class = "resume-subsection" id = "resume-education">
+                    <header>Education</header>
+                    <table id = "table-education" class = "resume-table">
+                        <tr>
+                            <td class = "nowrap">2013 &mdash; Current</td>
+                            <td>
+                                KU Leuven &mdash; Ph. D at the Computer Graphics Research Group of the Department of Computer Science.<br>
+                                <ul>
+                                    <li><b>Topic:</b> Reducing the noise in global illumination algorithms</li>
+                                    <li><b>Promotor:</b> prof. dr. ir. Philip Dutr&eacute;</li>
+                                    <li><b>Funded by:</b> IWT (Institute agency for Innovation by Science and Technology)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2011 &mdash; 2013</td>
+                            <td>KU Leuven &mdash; Master of Science in Engineering (Computer Science) &mdash; <b>Cum Laude</b>
+(76,17%).
+                                <ul>
+                                    <li><b>Major:</b> Human Computer Interaction (HCI)</li>
+                                    <li><b>Minor:</b> Secure software</li>
+                                    <li><b>Thesis:</b> Stochastic Visibility in Rendering Algorithms using the occlusion map.</li>
+                                    <li><b>Promotor:</b> prof. dr. ir. Philip Dutr&eacute;</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2008 &mdash; 2011</td>
+                            <td>KU Leuven &mdash; Bachelor of Science in Engineering &mdash; <b>Cum Laude</b> (69,74%)
+                                <ul>
+                                    <li><b>Major:</b> Computer Science</li>
+                                    <li><b>Minor:</b> Electrical Engineering</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class = "resume-subsection" id = "resume-languages">
+                    <header>Languages</header>
+                    <table class = "resume-table">
+                        <tr>
+                            <td>Dutch</td>
+                            <td>mother tongue</td>
+                        </tr>
+                        <tr>
+                            <td>English</td>
+                            <td>fluent speaker and writer</td>
+                        </tr>
+                        <tr>
+                            <td>French</td>
+                            <td>basic written and oral skills</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class = "resume-subsection" id = "resume-skills">
+                    <header>Skills</header>
+                    <table class = "resume-table">
+                        <tr>
+                            <td>Programming languages:</td>
+                            <td>C++, Java, JavaScript, HTML5, CSS, Matlab, GML, Prolog, Haskell.</td>
+                        </tr>
+                        <tr>
+                            <td>Operating systems/tools:</td>
+                            <td>Ubuntu, Windows family, Git, SVN, Latex, Word, PowerPoint,
+Eclipse.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class = "resume-subsection" id = "resume-publications">
+                    <header>Publications</header>
+                    <table id = "table-publications" class = "resume-table">
+                        <tr>
+                            <td>
+                                <span class = "nowrap">Moulin Matthias</span>, 
+                                <span class = "nowrap">Billen Niels</span>, 
+                                <span class = "nowrap">Dutr&eacute; Philip</span>
+                            </td>
+                            <td>
+                                Efficient visibility heuristics for kd-trees using the RTSAH<br>
+                                (published online at Eurographics Symposium on Rendering 2015 &mdash; Experimental Ideas and Implementations)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class = "nowrap">Billen Niels</span>, 
+                                <span class = "nowrap">Lagae Ares</span>, 
+                                <span class = "nowrap">Dutr&eacute; Philip</span>
+                            </td>
+                            <td>
+                                Probabilistic Visibility Evaluation using Geometry Proxies.<br>
+                                (published at Eurographics Symposium on Rendering 2014)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class = "nowrap">Billen Niels</span>, 
+                                <span class = "nowrap">Engelen Bj&ouml;rn</span>, 
+                                <span class = "nowrap">Lagae Ares</span>, 
+                                <span class = "nowrap">Dutr&eacute; Philip</span>
+                            </td>
+                            <td>
+                                Probabilistic Visibility Evaluation for Direct Illumination.<br>
+                                (published at Eurographics Symposium on Rendering 2013)
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class = "resume-subsection" id = "resume-projects">
+                    <header>Past Projects</header>
+                    <table class = "resume-table">
+                        <tr>
+                            <td>Revision:</td>
+                            <td>
+                                a three-dimensional ray tracing engine written from scratch, capable of rendering scenes with several kinds of effects (e.g. motion blur, depth of field,...)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Silen:</td>
+                            <td>
+                                extracurricular group project in which we wrote a cross platform music player written in Java using SWT and GStreamer.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+        </div>
+        <script src = "publications.js"></script>
+        <script src = "scroll.js"></script>
     </body>
 </html>

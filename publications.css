@@ -2,19 +2,7 @@
     background-color: #3587e8;
 }
 
-#publications > nav {
-    background-color: skyblue;
-}
-
-#publications > nav > a {
-    color: white;
-}
-
-#publications > nav > a:hover {
-    border-bottom: 0.2rem solid white;
-}
-
-#publications > article {
+article {
     margin: 2rem auto;
     
     width: 80rem;
@@ -26,22 +14,19 @@
 
 #publications > article > header {
     color: white;
-    font-family: raleway-bold;
-    font-size: 5rem;
 }
 
 .publication {
-    /*background-color: #ffbf5d;*/
-    background-color:white;
+    display: flex;
+
+    background-color: white;
     color: black;
-    /*text-shadow: 1px 1px 4px gray;*/
+
     border-radius: 0.2rem;
     padding: 2rem;
     margin-bottom: 2rem;
     
-    display: flex;
     box-shadow: 0.2rem 0.2rem 0.4rem gray;
-
 }
 
 .title {

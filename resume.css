@@ -1,0 +1,31 @@
+#resume {
+    background-color: rgb(240, 240, 240);
+}
+
+.resume-subsection > header {
+    font-size: 2rem;
+    width: 100%;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.resume-table {
+    margin: 1rem 0rem;
+}
+
+#table-education, #table-publications {
+    border-spacing: 0rem 1rem;
+}
+
+#table-education > tbody > tr > td:first-child {
+    border-right: 1px solid lightgray;
+}
+
+#table-publications > tbody > tr > td:first-child {
+    border-right: 1px solid lightgray;
+}
+
+td {
+    padding: 0.5rem 1rem;
+    vertical-align: top;
+}

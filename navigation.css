@@ -8,7 +8,6 @@ nav {
     left: 0;
     right: 0;
     top: 0;
-    height: 4rem;
     
     display: flex;
     align-items: center;
@@ -19,22 +18,30 @@ nav {
     background-color: white;
     
     font-size: 2rem;
-    font-family: raleway-thin;
+    font-family: raleway-regular;
         
     border-bottom: 1px solid rgb(211, 211, 211);
 }
 
 /* styling of the navigation element */
 nav > a  {
+    height: 4rem;
     margin: 0rem 1rem;
-    box-sizing: content-box;
+    
+    box-sizing: border-box;
     text-decoration: none;
     text-align: center;
-    border-bottom: 0.2rem solid transparent;
+    
+    display: flex;
+    align-items: center;
+    
+    border-top: 0.3rem solid transparent;
+    border-bottom: 0.3rem solid transparent;
     cursor: pointer;
 }
 
 nav > a:hover {
     color: skyblue;
-    border-bottom: 0.2rem solid skyblue;
+    border-top: 0.3rem solid transparent;
+    border-bottom: 0.3rem solid skyblue;
 }
