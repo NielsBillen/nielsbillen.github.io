@@ -3,9 +3,9 @@
 }
 
 article {
-    margin: 2rem auto;
+    margin: 16px auto; /*2rem auto;*/
     
-    width: 80rem;
+    width: 1120px; /*80rem;*/
     max-width: 90%;
     display: flex;
     flex-direction: column;
@@ -23,23 +23,23 @@ article {
     background-color: white;
     color: black;
 
-    border-radius: 0.2rem;
-    padding: 2rem;
-    margin-bottom: 2rem;
+    border-radius: 2px; /*0.2rem;*/
+    padding: 16px; /*2rem;*/
+    margin-bottom: 16px; /*2rem;*/
     
-    box-shadow: 0.2rem 0.2rem 0.4rem gray;
+    box-shadow: 4px 4px 8px gray;/*0.2rem 0.2rem 0.4rem gray;*/
 }
 
 .title {
     font-family: raleway-bold;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 32px;
+    margin-bottom: 16px;
 }
 
 .authors {
     font-family: raleway-regular;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 24px;
+    margin-bottom: 24px;
 }
 
 .author {
@@ -48,7 +48,7 @@ article {
 
 .location {
     font-family: raleway-regular;
-    font-size: 1.5rem;
+    font-size: 24px;
 }
 
 .publication-thumbnail {
@@ -57,13 +57,13 @@ article {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 0.4rem solid rgb(230,230,230);
-    box-shadow: 0.2rem 0.2rem 0.4rem gray;
+    border: /*0.4rem*/ 8px solid rgb(230,230,230);
+    box-shadow: 4px 4px 8px /*0.2rem 0.2rem 0.4rem*/ gray;
 }
 
 
 
 .publication-data {
     flex: 1;
-    padding: 1rem;
+    padding: /*1rem;*/ 16px;
 }

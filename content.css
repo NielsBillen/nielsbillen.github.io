@@ -19,6 +19,7 @@
 /* styling for the htm */
 html {
     font-family: raleway-regular;
+    font-size: 24px;
 }
 
 /* styling for the body */
@@ -29,17 +30,18 @@ body {
 /* styling for the headers */
 header {
     font-family: raleway-bold;
-    font-size: 5rem;
+    font-size: 64px; /*5rem*/
 }
 
 /* styling for a single page */
 .page {
-    min-height: 100vh;
-    padding: 2rem 1rem;
+    min-height: 100%;
+    padding: 28px 14px; /*2rem 1rem*/
+    box-sizing: border-box;
 }
 
 .page > article > header {
-    margin-bottom: 2rem;
+    margin-bottom: 28px; /*2rem;*/
 }
 
 /* styling for elements which should center their content*/
@@ -48,7 +50,7 @@ header {
     flex-direction: column;
     align-items: center;
     align-content: center;
-    /*justify-content: center;*/
+    justify-content: center;
 }
 
 /* prevents word wrapping */
@@ -61,7 +63,11 @@ header {
     background-image: url("images/arrow-down.svg");
     background-position: center;
     background-size: cover;
-    width: 3rem;
-    height: 3rem;
+    width: 42px; /*3rem;*/
+    height: 42px; /*3rem;*/
     cursor: pointer;
+}
+
+.arrow-down-white {
+    background-image: url("images/arrow-down-white.svg");
 }

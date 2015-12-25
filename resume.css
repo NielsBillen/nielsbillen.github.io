@@ -3,18 +3,18 @@
 }
 
 .resume-subsection > header {
-    font-size: 2rem;
     width: 100%;
-    padding-bottom: 0.5rem;
+    font-size: 28px;
+    padding-bottom: 8px; /*0.5rem;*/
     border-bottom: 1px solid lightgray;
 }
 
 .resume-table {
-    margin: 1rem 0rem;
+    margin: 16px 0px; /*1rem 0rem;*/
 }
 
 #table-education, #table-publications {
-    border-spacing: 0rem 1rem;
+    border-spacing: 0px 16px; /*0rem 1rem;*/
 }
 
 #table-education > tbody > tr > td:first-child {
@@ -26,14 +26,15 @@
 }
 
 td {
-    padding: 0.5rem 1rem;
+    padding: 8px 16px; /*0.5rem 1rem;*/
     vertical-align: top;
 }
 
 table {
     width: 100%;
+    font-size: 18px;
 }
 
 table > tbody > tr > td:first-child {
-    width: 20%;
+    width: 25%;
 }
