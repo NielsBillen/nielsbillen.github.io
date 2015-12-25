@@ -1,5 +1,6 @@
 #publications {
-    background-color: #3587e8;
+    /*background-color: #3587e8;*/
+    background-color: #786dff;
 }
 
 article {
@@ -32,13 +33,13 @@ article {
 
 .title {
     font-family: raleway-bold;
-    font-size: 32px;
+    font-size: 28px;
     margin-bottom: 16px;
 }
 
 .authors {
     font-family: raleway-regular;
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 24px;
 }
 
@@ -48,7 +49,7 @@ article {
 
 .location {
     font-family: raleway-regular;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .publication-thumbnail {

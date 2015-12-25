@@ -19,7 +19,7 @@
 /* styling for the htm */
 html {
     font-family: raleway-regular;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 /* styling for the body */
@@ -60,6 +60,7 @@ header {
 
 /* styling for down-pointing arrows */
 .arrow-down {
+    margin: 0 auto;
     background-image: url("images/arrow-down.svg");
     background-position: center;
     background-size: cover;

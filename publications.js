@@ -61,8 +61,10 @@ var Publications = (function () {
             author.innerHTML = this.authors[i].toHTML();
             authors.appendChild(author);
             
-            if (i  < this.authors.length - 1) {
+            if (i < this.authors.length - 2) {
                 authors.innerHTML += ", ";
+            } else if (i < this.authors.length - 1) {
+                authors.innerHTML += " and ";
             }
         }
         
