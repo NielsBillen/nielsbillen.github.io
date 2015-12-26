@@ -10,14 +10,21 @@ var Scroll = (function () {
     
     my.ScrollToElementById = function (elementId) {
         if (canScroll) {
-            var doc, element;
+            var doc, element, bodyRect, maxScroll, viewHeight;
+            
+            bodyRect = document.body.getBoundingClientRect();
+            viewHeight = window.innerHeight || 0;
+            maxScroll = bodyRect.height - viewHeight + 64;
+            
+            console.log(bodyRect);
+            console.log(viewHeight);
             
             canScroll = false;
 
             element = document.getElementById(elementId);
             doc = document.documentElement;
             scrollStart = my.getTop();
-            scrollTo = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+            scrollTo = Math.min(element.getBoundingClientRect().top - bodyRect.top, maxScroll);
             scrollSpeed = Math.ceil(Math.abs(scrollTo - scrollStart) * 0.01);
             my.PerformScroll();
         }
