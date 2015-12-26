@@ -28,7 +28,7 @@ article {
     padding: 16px; /*2rem;*/
     margin-bottom: 16px; /*2rem;*/
     
-    box-shadow: 4px 4px 8px gray;/*0.2rem 0.2rem 0.4rem gray;*/
+    box-shadow: 6px 6px 16px darkslategray;/*0.2rem 0.2rem 0.4rem gray;*/
 }
 
 .title {

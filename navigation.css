@@ -22,7 +22,7 @@ nav {
 }
 
 /* styling of the navigation element */
-nav > a  {
+nav > span  {
     margin: 0px 0px; /*0rem 1rem;*/
     padding: 0px 14px;
     height: 100%;
@@ -43,7 +43,7 @@ nav > a  {
     cursor: pointer;
 }
 
-nav > a:hover {
+nav > span:hover {
     color: #786dff;
     border-top: 6px solid transparent;
     border-bottom: 6px solid #786dff;

@@ -33,6 +33,12 @@ header {
     font-size: 64px; /*5rem*/
 }
 
+/* a */
+a {
+    /*color: white;*/
+    text-decoration: none;
+}
+
 /* styling for a single page */
 .page {
     min-height: 100%;

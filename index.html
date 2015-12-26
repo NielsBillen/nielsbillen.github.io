@@ -12,9 +12,10 @@
     </head>
     <body>
         <nav>
-            <a onclick = "Scroll.ScrollToElementById('home')">Home</a>
-            <a onclick = "Scroll.ScrollToElementById('publications')">Publications</a>
-            <a onclick = "Scroll.ScrollToElementById('resume')">Resume</a>
+            <span onclick = "Scroll.ScrollToElementById('home')">Home</span>
+            <span onclick = "Scroll.ScrollToElementById('publications')">Publications</span>
+            <span onclick = "Scroll.ScrollToElementById('resume')">Resume</span>
+            <span onclick = "Scroll.ScrollToElementById('contact')">Contact</span>
         </nav>
         <div id = "home" class = "page center">
             <article class = "center">
@@ -170,13 +171,53 @@ Eclipse.</td>
                     </table>
                 </div>
             </article>
-            <!--<div class = "arrow-down" onclick = "Scroll.ScrollToElementById('contact')"></div>-->
+            <div class = "arrow-down" onclick = "Scroll.ScrollToElementById('contact')"></div>
         </div>
-        <!--<div id = "contact" class = "page">
+        <div id = "contact" class = "page">
             <article>
-                <header>Contact</header>
+                <header id = "contact-header-wrapper">
+                    <div id = "contact-header">Contact</div>
+                    <a class = "contact-link" id = "contact-linked-in" href="https://be.linkedin.com/in/niels-billen-2696a49a">
+                    </a>
+                    <a class = "contact-link" id = "contact-github" href="https://github.com/NielsBillen">
+                    </a>
+                </header>
+                <table id = "table-contact">
+                    <tr>
+                        <td>
+                            Work e-mail:
+                        </td>
+                        <td>
+                            <a href="mailto:niels.billen@cs.kuleuven.be">niels.billen{at}cs.kuleuven.be</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Work telephone:
+                        </td>
+                        <td>
+                             +32 16 37 39 88
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Work address:</td>
+                        <td>
+                            Departement Computerwetenschappen<br>
+                            Celestijnenlaan 200A, B-3001<br>
+                            Heverlee, Belgium
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Office:
+                        </td>
+                        <td>
+                            03.13
+                        </td>
+                    </tr>
+                </table>
             </article>
-        </div>-->
+        </div>
         <script src = "publications.js"></script>
         <script src = "scroll.js"></script>
     </body>

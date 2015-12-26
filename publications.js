@@ -80,23 +80,6 @@ var Publications = (function () {
         publication.appendChild(data);
         
         container.appendChild(publication);
-        
-        /*
-        <div class="publication">
-                    <aside class="publication-thumbnail" style="background-image: url('images/MBD15EVHFKUTR_thumbnail.jpg')">
-                    </aside>
-                    <div class="publication-data">
-                        <div class="title">Efficient visibility heuristics for kd-trees using the RTSAH</div>
-                        <div class="authors">
-                            <span class="author">Moulin Matthias</span>,
-                            <span class="author">Billen Niels</span>,
-                            <span class="author">Dutr&eacute; Philip</span>.
-                        </div>
-                        <div class="location">
-                            Eurographics Symposium on Rendering - Experimental Ideas & Implementations, July 2015
-                        </div>
-                    </div>
-                </div>*/
     };
     
     return my;

@@ -2,3 +2,51 @@
     color: white;
     background-color: purple;
 }
+
+#contact-header-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#contact-header {
+    flex: 1;
+}
+
+.contact-link {
+    width: 8vmin;
+    height: 8vmin;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 8px;
+}
+
+.contact-link:last-child {
+    margin-right: 0;
+}
+
+#contact-linked-in {
+    background-image: url("images/linkedin-white.svg");
+}
+
+#contact-github {
+    background-image: url("images/github-white.svg");
+}
+
+
+#table-contact {
+    font-size: 24px;
+    color: black;
+    
+    border-radius: 2px; /*0.2rem;*/
+    padding: 16px; /*2rem;*/
+    
+    background-color: white;
+    
+    box-shadow: 6px 6px 16px black;/*0.2rem 0.2rem 0.4rem gray;*/
+}
+
+#table-contact > tbody > tr > td:first-child {
+    font-family: raleway-bold;
+}
