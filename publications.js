@@ -80,7 +80,6 @@ var Publications = (function () {
         if (this.links) {
             for (i = 0; i < this.links.length; i += 1) {
                 link = this.links[i];
-                console.log(link);
                 
                 linkElement = document.createElement("a");
                 linkElement.className = "link";
