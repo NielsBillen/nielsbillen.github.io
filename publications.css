@@ -52,17 +52,53 @@ article {
     font-size: 20px;
 }
 
+.links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    
+    margin-top: 24px;
+}
+
+.link {
+    width: 96px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+/*
+.link:first-child {
+    margin-left: 0;
+}*/
+
+.link:last-child {
+    margin-right: 0;
+}
+
+.link-icon {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+}
+
+.link-description {
+    text-align: center;
+    font-size: 16px;
+}
+
 .publication-thumbnail {
-    width: 20vmin;
-    height: 20vmin;
+    width: 24vmin;
+    height: 24vmin;
+    min-width: 160px;
+    min-height: 160px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border: /*0.4rem*/ 8px solid rgb(230,230,230);
     box-shadow: 4px 4px 8px /*0.2rem 0.2rem 0.4rem*/ gray;
 }
-
-
 
 .publication-data {
     flex: 1;

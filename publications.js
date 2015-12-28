@@ -27,16 +27,17 @@ var Publications = (function () {
         this.icon = icon;
     };
     
-    my.Paper = function (title, authors, location, thumbnail, links) {
+    my.Paper = function (title, authors, location, thumbnail, projectPageLink, links) {
         this.title = title;
         this.authors = authors;
         this.location = location;
         this.thumbnail = thumbnail;
         this.links = links;
+        this.projectPageLink = projectPageLink;
     };
     
     my.Paper.prototype.add = function (container) {
-        var i, publication, aside, data, title, authors, author, location;
+        var i, publication, aside, data, title, authors, author, location, link, links, linkElement, linkIcon, linkDescription;
         
         publication = document.createElement("div");
         publication.className = "publication";
@@ -48,7 +49,8 @@ var Publications = (function () {
         data = document.createElement("div");
         data.className = "publication-data";
         
-        title = document.createElement("div");
+        title = document.createElement("a");
+        title.href = this.projectPageLink;
         title.className = "title";
         title.innerHTML = this.title;
         
@@ -72,9 +74,37 @@ var Publications = (function () {
         location.className = "location";
         location.innerHTML = this.location;
         
+        links = document.createElement("div");
+        links.className = "links";
+        
+        if (this.links) {
+            for (i = 0; i < this.links.length; i += 1) {
+                link = this.links[i];
+                console.log(link);
+                
+                linkElement = document.createElement("a");
+                linkElement.className = "link";
+                linkElement.href = link.link;
+                
+                linkIcon = document.createElement("img");
+                linkIcon.className = "link-icon";
+                linkIcon.src = link.icon;
+                
+                linkDescription = document.createElement("div");
+                linkDescription.className = "link-description";
+                linkDescription.innerHTML = link.title;
+                
+                linkElement.appendChild(linkIcon);
+                linkElement.appendChild(linkDescription);
+
+                links.appendChild(linkElement);
+            }
+        }
+        
         data.appendChild(title);
         data.appendChild(authors);
         data.appendChild(location);
+        data.appendChild(links);
         
         publication.appendChild(aside);
         publication.appendChild(data);
@@ -85,28 +115,52 @@ var Publications = (function () {
     return my;
 }());
 
-var Niels = new Publications.Author("Niels", "Billen", "https://perswww.kuleuven.be/~u0093806/");
+var Niels = new Publications.Author("Niels", "Billen", "http://nielsbillen.github.io/");
 var Matthias = new Publications.Author("Matthias", "Moulin", "http://matt77hias.github.io/");
 var Ares = new Publications.Author("Ares", "Lagae", "http://people.cs.kuleuven.be/~ares.lagae/");
 var Philip = new Publications.Author("Philip", "Dutr&eacute;", "http://people.cs.kuleuven.be/~philip.dutre/");
 var Bjorn = new Publications.Author("Bj&ouml;rn", "Engelen", null);
 
 var BELD13PVEDI = new Publications.Paper("Probabilistic Visibility Evaluation for Direct Illumination",
-                                        [Niels, Bjorn, Ares, Philip],
+                                         [Niels, Bjorn, Ares, Philip],
                                          "Computer Graphics Forum (Proceedings of the 19th Eurographics Symposium on Rendering), 32(4):39-47, July 2013.",
-                                        "images/BELD13PVEDI_thumbnail.jpg");
+                                         "images/BELD13PVEDI_thumbnail.jpg",
+                                         "http://graphics.cs.kuleuven.be/publications/BELD13PVEDI/index.html",
+                                         [new Publications.Link("Project page", "http://graphics.cs.kuleuven.be/publications/BELD13PVEDI/index.html", "images/icon_html.png"),
+                                          new Publications.Link("Paper", "http://graphics.cs.kuleuven.be/publications/BELD13PVEDI/BELD13PVEDI_paper.pdf", "images/icon_pdf.png"),
+                                          new Publications.Link("Presentation", "http://graphics.cs.kuleuven.be/publications/BELD13PVEDI/BELD13PVEDI_presentation.pdf", "images/icon_pdf.png"),
+                                          new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/BELD13PVEDI/BELD13PVEDI_citation.bib", "images/icon_tex.png"),
+                                          new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/BELD13PVEDI/BELD13PVEDI_abstract.txt", "images/icon_txt.png"),
+                                          new Publications.Link("Lirias", "https://lirias.kuleuven.be/handle/123456789/401248", "images/icon_html.png"),
+                                          new Publications.Link("DOI", "https://dx.doi.org/10.1111/cgf.12149", "images/icon_html.png")]);
 
 var BLD14PVEGP = new Publications.Paper("Probabilistic Visibility Evaluation using Geometry Proxies",
                                         [Niels, Ares, Philip],
-                                         "Computer Graphics Forum (Proceedings of the 20th Eurographics Symposium on Rendering), 33(4):143-152, July 2014.",
-                                        "images/BLD14PVEGP_thumbnail.jpg");
+                                        "Computer Graphics Forum (Proceedings of the 20th Eurographics Symposium on Rendering), 33(4):143-152, July 2014.",
+                                        "images/BLD14PVEGP_thumbnail.jpg",
+                                        "http://graphics.cs.kuleuven.be/publications/BLD14PVEGP/index.html",
+                                        [new Publications.Link("Project page", "http://graphics.cs.kuleuven.be/publications/BLD14PVEGP/index.html", "images/icon_html.png"),
+                                         new Publications.Link("Paper", "http://graphics.cs.kuleuven.be/publications/BLD14PVEGP/BLD14PVEGP_paper.pdf", "images/icon_pdf.png"),
+                                         new Publications.Link("Presentation", "http://graphics.cs.kuleuven.be/publications/BLD14PVEGP/BLD14PVEGP_presentation.pdf", "images/icon_pdf.png"),
+                                         new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/BLD14PVEGP/BLD14PVEGP_citation.bib", "images/icon_tex.png"),
+                                         new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/BLD14PVEGP/BLD14PVEGP_abstract.txt", "images/icon_txt.png"),
+                                         new Publications.Link("Lirias", "https://lirias.kuleuven.be/handle/123456789/454641", "images/icon_html.png"),
+                                         new Publications.Link("DOI", "https://dx.doi.org/10.1111/cgf.12421", "images/icon_html.png")]);
 
 var MBD15EVHFKUTR = new Publications.Paper("Efficient visibility heuristics for kd-trees using the RTSAH",
-                                        [Matthias, Niels, Philip],
-                                         "Eurographics Symposium on Rendering - Experimental Ideas & Implementations, July 2015.",
-                                        "images/MBD15EVHFKUTR_thumbnail.jpg");
+                                           [Matthias, Niels, Philip],
+                                           "Eurographics Symposium on Rendering - Experimental Ideas & Implementations, July 2015.",
+                                           "images/MBD15EVHFKUTR_thumbnail.jpg",
+                                           "http://graphics.cs.kuleuven.be/publications/MBD15EVHFKUTR/index.html",
+                                           [new Publications.Link("Project page", "http://graphics.cs.kuleuven.be/publications/MBD15EVHFKUTR/index.html", "images/icon_html.png"),
+                                            new Publications.Link("Paper", "http://graphics.cs.kuleuven.be/publications/MBD15EVHFKUTR/MBD15EVHFKUTR_paper.pdf", "images/icon_pdf.png"),
+                                            new Publications.Link("Presentation", "http://graphics.cs.kuleuven.be/publications/MBD15EVHFKUTR/MBD15EVHFKUTR_presentation.pdf", "images/icon_pdf.png"),
+                                            new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/MBD15EVHFKUTR/MBD15EVHFKUTR_citation.bib", "images/icon_tex.png"),
+                                            new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/MBD15EVHFKUTR/MBD15EVHFKUTR_abstract.txt", "images/icon_txt.png"),
+                                            new Publications.Link("DOI", "https://dx.doi.org/10.2312/sre.20151164", "images/icon_html.png")]);
 
 var publicationContainer = document.getElementById("publications-container");
+
 MBD15EVHFKUTR.add(publicationContainer);
 BLD14PVEGP.add(publicationContainer);
 BELD13PVEDI.add(publicationContainer);
