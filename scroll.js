@@ -13,13 +13,13 @@ var Scroll = (function () {
             
         bodyRect = document.body.getBoundingClientRect();
         viewHeight = window.innerHeight || 0;
-        maxScroll = bodyRect.height - viewHeight + 64;
+        maxScroll = bodyRect.height - viewHeight;
         
         element = document.getElementById(elementId);
         doc = document.documentElement;
         
         scrollStart = my.getTop();
-        scrollTo = Math.min(element.getBoundingClientRect().top - bodyRect.top, maxScroll);
+        scrollTo = Math.max(0, Math.min(element.getBoundingClientRect().top - bodyRect.top - 64, maxScroll));
         scrollSpeed = Math.ceil(Math.abs(scrollTo - scrollStart) * 0.01);
         
         clearTimeout(timer);

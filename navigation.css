@@ -2,7 +2,7 @@
  * add a margin to the top of the body for the fixed position navigation bar
  */
 body {
-    margin-top: 64px; /*4rem;*/
+    /*margin-top: 64px; /*4rem;*/
 }
 
 /* styling for the navigation bar */
