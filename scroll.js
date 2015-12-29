@@ -19,7 +19,7 @@ var Scroll = (function () {
         doc = document.documentElement;
         
         scrollStart = my.getTop();
-        scrollTo = Math.max(0, Math.min(element.getBoundingClientRect().top - bodyRect.top - 64, maxScroll));
+        scrollTo = Math.max(0, Math.min(element.getBoundingClientRect().top - bodyRect.top, maxScroll));
         scrollSpeed = Math.ceil(Math.abs(scrollTo - scrollStart) * 0.01);
         
         clearTimeout(timer);
