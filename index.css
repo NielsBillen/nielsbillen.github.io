@@ -7,8 +7,9 @@
 #home > article {
     margin: 0 auto;
     max-width: 90%;
-    width: 700px; /*50rem*/
+    width: 700px; 
     text-align: center;
+    
 }
 
 /* styling for the profile picture */

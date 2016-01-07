@@ -2,7 +2,7 @@
     background-color: rgb(240, 240, 240);
 }
 
-.resume-subsection > header > h1 {
+.resume-subsection > header > h2 {
     width: 100%;
     font-size: 28px;
     padding-bottom: 8px; /*0.5rem;*/
