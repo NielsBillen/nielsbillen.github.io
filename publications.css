@@ -3,7 +3,7 @@
     background-color: #786dff;
 }
 
-article {
+#resume.article {
     margin: 16px auto; /*2rem auto;*/
     
     width: 1120px; /*80rem;*/

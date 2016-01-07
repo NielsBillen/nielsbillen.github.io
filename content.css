@@ -46,16 +46,29 @@ body {
     margin: 0;
 }
 
-/* styling for the headers */
-header {
-    font-family: raleway-bold;
-    font-size: 64px; /*5rem*/
-}
-
 /* a */
 a {
     /*color: white;*/
     text-decoration: none;
+}
+
+/* h1 */
+h1 {
+    margin: 0;
+    font-family: raleway-bold;
+    font-size: 64px; /*5rem*/
+    font-weight: normal;
+}
+
+/* h2 */
+h2 {
+    margin: 0;
+    font-weight: normal;
+}
+
+/* p */
+p {
+    margin: 0;
 }
 
 /* styling for a single page */

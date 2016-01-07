@@ -45,17 +45,15 @@
         </nav>
         <div id = "home" class = "page center">
             <article class = "center">
-                <div id = "profilepicture"></div>
-                <div id = "introduction">
-                    Hi, I am Niels Billen
-                </div>
-                <div id = "title">
-                    Ph.D Candidate at the <span class="nowrap">KU Leuven</span> University
-                </div>
-                <div id = "workdescription">
+                <aside id = "profilepicture"></aside>
+                <header>
+                    <h1 id = "introduction">Hi, I am Niels Billen</h1>
+                    <h2 id = "title">Ph.D Candidate at the <span class="nowrap">KU Leuven</span> University</h2>
+                </header>
+                <p id = "workdescription">
                     I am a software engineer, currently pursuing a Ph.D at the <span class="nowrap">KU Leuven</span> University.
                     The focus of my research is developing new algorithms to reduce the noise in global illumination algorithms.
-                </div>
+                </p>
             </article>
             <div class = "arrow-down" onclick = "Scroll.ScrollToElementById('publications')">
             </div>
@@ -63,7 +61,7 @@
         <div id = "publications" class = "page center">
             <article id = "publications-container">
                 <header>
-                    Publications
+                    <h1>Publications</h1>
                 </header>
             </article>
             <div class = "arrow-down arrow-down-white" onclick = "Scroll.ScrollToElementById('resume')">
@@ -72,18 +70,19 @@
         <div id = "resume" class = "page">
             <article>
                 <header>
-                    Resume
+                    <h1>Resume</h1>
                 </header>
-                
-                <div class = "resume-subsection" id = "resume-education">
-                    <header>Education</header>
+                <article class = "resume-subsection" id = "resume-education">
+                    <header>
+                        <h1>Education</h1>
+                    </header>
                     <table id = "table-education" class = "resume-table">
                         <tr>
                             <td class = "nowrap">
                                 2013 &mdash; Current
                             </td>
                             <td>
-                                KU Leuven &mdash; Ph. D at the Computer Graphics Research Group of the Department of Computer Science.<br>
+                                <p>KU Leuven &mdash; Ph. D at the Computer Graphics Research Group of the Department of Computer Science.</p>
                                 <ul>
                                     <li><b>Topic:</b> Reducing the noise in global illumination algorithms</li>
                                     <li><b>Promotor:</b> prof. dr. ir. Philip Dutr&eacute;</li>
@@ -93,7 +92,8 @@
                         </tr>
                         <tr>
                             <td class = "nowrap">2011 &mdash; 2013</td>
-                            <td>KU Leuven &mdash; Master of Science in Engineering (Computer Science) &mdash; <b>Cum Laude</b> (76,17%).
+                            <td>
+                                <p>KU Leuven &mdash; Master of Science in Engineering (Computer Science) &mdash; <b>Cum Laude</b> (76,17%).</p>
                                 <ul>
                                     <li><b>Major:</b> Human Computer Interaction (HCI)</li>
                                     <li><b>Minor:</b> Secure software</li>
@@ -104,7 +104,8 @@
                         </tr>
                         <tr>
                             <td class = "nowrap">2008 &mdash; 2011</td>
-                            <td>KU Leuven &mdash; Bachelor of Science in Engineering &mdash; <b>Cum Laude</b> (69,74%)
+                            <td>
+                                <p>KU Leuven &mdash; Bachelor of Science in Engineering &mdash; <b>Cum Laude</b> (69,74%).</p>
                                 <ul>
                                     <li><b>Major:</b> Computer Science</li>
                                     <li><b>Minor:</b> Electrical Engineering</li>
@@ -112,9 +113,11 @@
                             </td>
                         </tr>
                     </table>
-                </div>
-                <div class = "resume-subsection" id = "resume-languages">
-                    <header>Languages</header>
+                </article>
+                <article class = "resume-subsection" id = "resume-languages">
+                    <header>
+                        <h1>Languages</h1>
+                    </header>
                     <table class = "resume-table">
                         <tr>
                             <td>Dutch</td>
@@ -129,9 +132,11 @@
                             <td>basic written and oral skills</td>
                         </tr>
                     </table>
-                </div>
-                <div class = "resume-subsection" id = "resume-skills">
-                    <header>Skills</header>
+                </article>
+                <article class = "resume-subsection" id = "resume-skills">
+                    <header>
+                        <h1>Skills</h1>
+                    </header>
                     <table class = "resume-table">
                         <tr>
                             <td>Programming languages:</td>
@@ -142,9 +147,11 @@
                             <td>Ubuntu, Windows family, Git, SVN, Latex, Word, PowerPoint, Eclipse.</td>
                         </tr>
                     </table>
-                </div>
-                <div class = "resume-subsection" id = "resume-publications">
-                    <header>Publications</header>
+                </article>
+                <article class = "resume-subsection" id = "resume-publications">
+                    <header>
+                        <h1>Publications</h1>
+                    </header>
                     <table id = "table-publications" class = "resume-table">
                         <tr>
                             <td>
@@ -153,8 +160,8 @@
                                 <span class = "nowrap">Dutr&eacute; Philip</span>
                             </td>
                             <td>
-                                Efficient visibility heuristics for kd-trees using the RTSAH<br>
-                                (published online at Eurographics Symposium on Rendering 2015 &mdash; Experimental Ideas and Implementations)
+                                <p>Efficient visibility heuristics for kd-trees using the RTSAH</p>
+                                <p>(published online at Eurographics Symposium on Rendering 2015 &mdash; Experimental Ideas and Implementations)</p>
                             </td>
                         </tr>
                         <tr>
@@ -181,9 +188,11 @@
                             </td>
                         </tr>
                     </table>
-                </div>
-                <div class = "resume-subsection" id = "resume-projects">
-                    <header>Past Projects</header>
+                </article>
+                <article class = "resume-subsection" id = "resume-projects">
+                    <header>
+                        <h1>Past Projects</h1>
+                    </header>
                     <table class = "resume-table">
                         <tr>
                             <td>Revision:</td>
@@ -199,18 +208,16 @@
                             </td>
                         </tr>
                     </table>
-                </div>
+                </article>
             </article>
             <div class = "arrow-down" onclick = "Scroll.ScrollToElementById('contact')"></div>
         </div>
         <div id = "contact" class = "page">
             <article>
                 <header id = "contact-header-wrapper">
-                    <div id = "contact-header">Contact</div>
-                    <a class = "contact-link" id = "contact-linked-in" href="https://be.linkedin.com/in/niels-billen-2696a49a">
-                    </a>
-                    <a class = "contact-link" id = "contact-github" href="https://github.com/NielsBillen">
-                    </a>
+                    <h1 id = "contact-header">Contact</h1>
+                    <a class = "contact-link" id = "contact-linked-in" href="https://be.linkedin.com/in/niels-billen-2696a49a"></a>
+                    <a class = "contact-link" id = "contact-github" href="https://github.com/NielsBillen"></a>
                 </header>
                 <table id = "table-contact">
                     <tr>
