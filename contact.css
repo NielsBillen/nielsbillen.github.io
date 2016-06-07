@@ -30,8 +30,16 @@
     background-image: url("images/linkedin-white.svg");
 }
 
+#contact-linked-in:hover {
+    background-image: url("images/linkedin-blue.svg");
+}
+
 #contact-github {
     background-image: url("images/github-white.svg");
+}
+
+#contact-github:hover {
+    background-image: url("images/github-blue.svg");
 }
 
 #table-contact {
