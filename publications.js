@@ -117,12 +117,12 @@ var Publications = (function () {
 var Niels = new Publications.Author("Niels", "Billen", "http://nielsbillen.github.io/");
 var Matthias = new Publications.Author("Matthias", "Moulin", "http://matt77hias.github.io/");
 var Ares = new Publications.Author("Ares", "Lagae", "http://people.cs.kuleuven.be/~ares.lagae/");
-var Philip = new Publications.Author("Philip", "Dutr&eacute;", "http://people.cs.kuleuven.be/~philip.dutre/");
+var Philip = new Publications.Author("Philip", "Dutr&eacute;", "https://sites.google.com/site/philipdutre/");
 var Bjorn = new Publications.Author("Bj&ouml;rn", "Engelen", null);
 
 var BELD13PVEDI = new Publications.Paper("Probabilistic Visibility Evaluation for Direct Illumination",
                                          [Niels, Bjorn, Ares, Philip],
-                                         "Computer Graphics Forum (Proceedings of the 19th Eurographics Symposium on Rendering), 32(4):39-47, July 2013.",
+                                         "Computer Graphics Forum (Proceedings of the 24th Eurographics Symposium on Rendering), 32(4):39-47, July 2013.",
                                          "images/BELD13PVEDI_thumbnail.jpg",
                                          "http://graphics.cs.kuleuven.be/publications/BELD13PVEDI/index.html",
                                          [new Publications.Link("Project page", "http://graphics.cs.kuleuven.be/publications/BELD13PVEDI/index.html", "images/icon_html.png"),
@@ -135,7 +135,7 @@ var BELD13PVEDI = new Publications.Paper("Probabilistic Visibility Evaluation fo
 
 var BLD14PVEGP = new Publications.Paper("Probabilistic Visibility Evaluation using Geometry Proxies",
                                         [Niels, Ares, Philip],
-                                        "Computer Graphics Forum (Proceedings of the 20th Eurographics Symposium on Rendering), 33(4):143-152, July 2014.",
+                                        "Computer Graphics Forum (Proceedings of the 25th Eurographics Symposium on Rendering), 33(4):143-152, July 2014.",
                                         "images/BLD14PVEGP_thumbnail.jpg",
                                         "http://graphics.cs.kuleuven.be/publications/BLD14PVEGP/index.html",
                                         [new Publications.Link("Project page", "http://graphics.cs.kuleuven.be/publications/BLD14PVEGP/index.html", "images/icon_html.png"),
@@ -158,8 +158,19 @@ var MBD15EVHFKUTR = new Publications.Paper("Efficient visibility heuristics for 
                                             new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/MBD15EVHFKUTR/MBD15EVHFKUTR_abstract.txt", "images/icon_txt.png"),
                                             new Publications.Link("DOI", "https://dx.doi.org/10.2312/sre.20151164", "images/icon_html.png")]);
 
+var BD2016LSFDI = new Publications.Paper("Line Sampling for Direct Illumination",
+                                           [Niels, Philip],
+                                           "To be published in Computer Graphics Forum (Proceedings of the 27th Eurographics Symposium on Rendering), 35(4), July 2016.",
+                                           "images/BD2016LSFDI_thumbnail.jpg",
+                                           "http://graphics.cs.kuleuven.be/publications/BD2016LSFDI/index.html",
+                                           [new Publications.Link("Project page", "http://graphics.cs.kuleuven.be/publications/BD2016LSFDI/index.html", "images/icon_html.png"),
+                                            new Publications.Link("Preprint", "http://graphics.cs.kuleuven.be/publications/BD2016LSFDI/BD2016LSFDI_paper.pdf", "images/icon_pdf.png"),
+                                            new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/BD2016LSFDI/BD2016LSFDI_citation.bib", "images/icon_tex.png"),
+                                            new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/BD2016LSFDI/BD2016LSFDI_abstract.txt", "images/icon_txt.png")]);
+
 var publicationContainer = document.getElementById("publications-container");
 
+BD2016LSFDI.add(publicationContainer);
 MBD15EVHFKUTR.add(publicationContainer);
 BLD14PVEGP.add(publicationContainer);
 BELD13PVEDI.add(publicationContainer);
