@@ -158,6 +158,17 @@ var MBD15EVHFKUTR = new Publications.Paper("Efficient visibility heuristics for 
                                             new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/MBD15EVHFKUTR/MBD15EVHFKUTR_abstract.txt", "images/icon_txt.png"),
                                             new Publications.Link("DOI", "https://dx.doi.org/10.2312/sre.20151164", "images/icon_html.png")]);
 
+var BD16VAUERC = new Publications.Paper("Visibility Acceleration using Efficient Ray Classification",
+                                           [Niels, Philip],
+                                           "CW Report 695",
+                                           "images/BD16VAUERC_thumbnail.jpg",
+                                           "http://graphics.cs.kuleuven.be/publications/BD16VAUERC/index.html",
+                                           [new Publications.Link("Project page", "http://graphics.cs.kuleuven.be/publications/BD16VAUERC/index.html", "images/icon_html.png"),
+                                            new Publications.Link("Preprint", "http://graphics.cs.kuleuven.be/publications/BD16VAUERC/BD16VAUERC_paper.pdf", "images/icon_pdf.png"),
+                                            new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/BD16VAUERC/BD16VAUERC_citation.bib", "images/icon_tex.png"),
+                                            new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/BD16VAUERC/BD16VAUERC_abstract.txt", "images/icon_txt.png"),
+                                            new Publications.Link("Report page", "http://www.cs.kuleuven.be/publicaties/rapporten/cw/CW695.abs.html", "images/icon_html.png")]);
+
 var BD2016LSFDI = new Publications.Paper("Line Sampling for Direct Illumination",
                                            [Niels, Philip],
                                            "To be published in Computer Graphics Forum (Proceedings of the 27th Eurographics Symposium on Rendering), 35(4), July 2016.",
@@ -171,6 +182,7 @@ var BD2016LSFDI = new Publications.Paper("Line Sampling for Direct Illumination"
 var publicationContainer = document.getElementById("publications-container");
 
 BD2016LSFDI.add(publicationContainer);
+BD16VAUERC.add(publicationContainer);
 MBD15EVHFKUTR.add(publicationContainer);
 BLD14PVEGP.add(publicationContainer);
 BELD13PVEDI.add(publicationContainer);
