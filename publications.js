@@ -119,6 +119,8 @@ var Matthias = new Publications.Author("Matthias", "Moulin", "http://matt77hias.
 var Ares = new Publications.Author("Ares", "Lagae", "http://people.cs.kuleuven.be/~ares.lagae/");
 var Philip = new Publications.Author("Philip", "Dutr&eacute;", "https://sites.google.com/site/philipdutre/");
 var Bjorn = new Publications.Author("Bj&ouml;rn", "Engelen", null);
+var Roald = new Publications.Author("Roald", "Frederickx", "https://people.cs.kuleuven.be/~roald.frederickx/");
+var Joran = new Publications.Author("Joran", "Van de Woestijne", null);
 
 var BELD13PVEDI = new Publications.Paper("Probabilistic Visibility Evaluation for Direct Illumination",
                                          [Niels, Bjorn, Ares, Philip],
@@ -171,7 +173,7 @@ var BD16VAUERC = new Publications.Paper("Visibility Acceleration using Efficient
 
 var BD2016LSFDI = new Publications.Paper("Line Sampling for Direct Illumination",
                                            [Niels, Philip],
-                                           "To be published in Computer Graphics Forum (Proceedings of the 27th Eurographics Symposium on Rendering), 35(4), July 2016.",
+                                           "Computer Graphics Forum (Proceedings of the 27th Eurographics Symposium on Rendering), 35(4), July 2016.",
                                            "images/BD2016LSFDI_thumbnail.jpg",
                                            "http://graphics.cs.kuleuven.be/publications/BD2016LSFDI/index.html",
                                            [new Publications.Link("Project page", "http://graphics.cs.kuleuven.be/publications/BD2016LSFDI/index.html", "images/icon_html.png"),
@@ -179,8 +181,20 @@ var BD2016LSFDI = new Publications.Paper("Line Sampling for Direct Illumination"
                                             new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/BD2016LSFDI/BD2016LSFDI_citation.bib", "images/icon_tex.png"),
                                             new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/BD2016LSFDI/BD2016LSFDI_abstract.txt", "images/icon_txt.png")]);
 
+var WFBD2017TCFMLT = new Publications.Paper("Temporal Coherence for Metropolis Light Transport",
+                                           [Joran, Roald, Niels, Philip],
+                                           "Eurographics Symposium on Rendering - Experimental Ideas & Implementations, July 2017.",
+                                           "images/WFBD2017TCFMLT_thumbnail.jpg",
+                                           "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/index.html",
+                                           [new Publications.Link("Project page", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/index.html", "images/icon_html.png"),
+                                            new Publications.Link("Paper", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/WFBD2017TCFMLT_paper.pdf", "images/icon_pdf.png"),
+                                            new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/WFBD2017TCFMLT_citation.bib", "images/icon_tex.png"),
+                                            new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/WFBD2017TCFMLT_abstract.txt", "images/icon_txt.png"),
+                                            new Publications.Link("Video", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/WFBD2017TCFMLT_video.mp4", "images/icon_video.png")]);
+
 var publicationContainer = document.getElementById("publications-container");
 
+WFBD2017TCFMLT.add(publicationContainer);
 BD2016LSFDI.add(publicationContainer);
 BD16VAUERC.add(publicationContainer);
 MBD15EVHFKUTR.add(publicationContainer);
