@@ -46,3 +46,18 @@
     margin: 52px 0px; /*4rem 0rem;*/
     color: darkslategray;
 }
+
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.image-link {
+    width: 6vmin;
+    height: 6vmin;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 8px;
+}

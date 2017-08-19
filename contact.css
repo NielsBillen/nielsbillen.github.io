@@ -3,23 +3,9 @@
     background-color: purple;
 }
 
-#contact-header-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
 
 #contact-header {
     flex: 1;
-}
-
-.contact-link {
-    width: 8vmin;
-    height: 8vmin;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 0 8px;
 }
 
 .contact-link:last-child {

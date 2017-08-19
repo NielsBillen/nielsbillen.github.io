@@ -2,11 +2,23 @@
     background-color: rgb(240, 240, 240);
 }
 
+#resume-header {
+    flex: 1;
+}
+
 .resume-subsection > header > h2 {
     width: 100%;
     font-size: 28px;
     padding-bottom: 8px; /*0.5rem;*/
     border-bottom: 1px solid lightgray;
+}
+
+#resume-link {
+    background-image: url("images/pdf-black.svg");
+}
+
+#resume-link:hover {
+    background-image: url("images/pdf-blue.svg");
 }
 
 .resume-table {
