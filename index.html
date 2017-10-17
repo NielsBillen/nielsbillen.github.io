@@ -36,11 +36,17 @@
         </script>
     </head>
     <body>
-        <nav>
+        <!--<nav>
             <span onclick = "Scroll.ScrollToElementById('home')">Home</span>
             <span onclick = "Scroll.ScrollToElementById('publications')">Publications</span>
             <span onclick = "Scroll.ScrollToElementById('resume')">Resume</span>
             <span onclick = "Scroll.ScrollToElementById('contact')">Contact</span>
+        </nav>-->
+        <nav>
+            <span onclick = "scrollLibrary.scrollTo('home')">Home</span>
+            <span onclick = "scrollLibrary.scrollTo('publications')">Publications</span>
+            <span onclick = "scrollLibrary.scrollTo('resume')">Resume</span>
+            <span onclick = "scrollLibrary.scrollTo('contact')">Contact</span>
         </nav>
         <article id = "home" class = "page center">
             <article class = "center">
@@ -54,7 +60,7 @@
                     The focus of my research is developing new algorithms to reduce the noise in global illumination algorithms.
                 </p>
             </article>
-            <div class = "arrow-down" onclick = "Scroll.ScrollToElementById('publications')">
+            <div class = "arrow-down" onclick = "scrollLibrary.scrollTo('publications')">
             </div>
         </article>
         <article id = "publications" class = "page center">
@@ -63,7 +69,7 @@
                     <h2>Publications</h2>
                 </header>
             </article>
-            <div class = "arrow-down arrow-down-white" onclick = "Scroll.ScrollToElementById('resume')">
+            <div class = "arrow-down arrow-down-white" onclick = "scrollLibrary.scrollTo('resume')">
             </div>
         </article>
         <article id = "resume" class = "page">
@@ -242,7 +248,7 @@
                     </table>
                 </article>
             </article>
-            <div class = "arrow-down" onclick = "Scroll.ScrollToElementById('contact')"></div>
+            <div class = "arrow-down" onclick = "scrollLibrary.scrollTo('contact')"></div>
         </article>
         <article id = "contact" class = "page">
             <article>

@@ -1,72 +1,73 @@
-/*-----------------------------------------------------------------------------
- * Utility javascript for smooth scrolling to an element.
- *---------------------------------------------------------------------------*/
-
-/*global console*/
-var Scroll = (function () {
+/*global console, document, window, clearTimeout, setTimeout*/
+var scrollLibrary = (function () {
     "use strict";
     
-    var my = {}, scrollStart, scrollTo, scrollSpeed, timer, performScroll, getLeft, getTop;
+    var my = {},
+        scroll,
+        scrollStartY, /* start position of the scroll */
+        scrollStartTime, /* time when the scroll was started (in ms)*/
+        scrollDuration, /* amount of time the scroll should take */
+        scrollToY, /* end position of the scroll */
+        scrollTimer, /* timer used for the scrolling */
+        getViewLeft,
+        getViewTop; /* function which returns the top of the view on the page */
     
-    performScroll = function () {
-        var doc, distance, position, speed, currentTop;
+    scrollDuration = 1500; /* duration of the scroll (in ms) */
+
+    
+    scroll = function () {
+        var currentTime,
+            progress,
+            interpolation,
+            scrollPosition,
+            b;
         
-        doc = document.documentElement;
-        distance = scrollTo - scrollStart;
-        currentTop = getTop();
-        position = (currentTop - scrollStart) / distance;
-        speed = Math.round(scrollSpeed * Math.abs(Math.sin(position * Math.PI))) + 1;
+        b = 0.05;
         
-        if (currentTop < scrollTo) {
-            if (currentTop + speed < scrollTo) {
-                window.scrollBy(0, speed);
-                
-                if (currentTop !== getTop()) {
-                    timer = setTimeout(performScroll, 1);
-                }
-            } else {
-                window.scrollTo(0, scrollTo);
-            }
-        } else if (currentTop > scrollTo) {
-            if (currentTop - speed > scrollTo) {
-                window.scrollBy(0, -speed);
-                
-                if (currentTop !== getTop()) {
-                    timer = setTimeout(performScroll, 1);
-                }
-            } else {
-                window.scrollTo(0, scrollTo);
-            }
+        
+        currentTime = new Date().getTime();
+        progress = Math.max(0, Math.min(1, (currentTime - scrollStartTime) / scrollDuration));
+        //interpolation = progress * (3.0 + progress * (-6.0 + 4.0 * progress));
+       
+        interpolation = (b * progress + 3.0 * progress / 8.0 - Math.sin(2.0 * Math.PI * progress) / (4.0 * Math.PI) + Math.sin(4.0 * Math.PI * progress) / (32.0 * Math.PI)) / (b + 3.0 / 8.0);
+        scrollPosition = Math.round(scrollStartY * (1.0 - interpolation) + interpolation * scrollToY);
+        
+        window.scrollTo(getViewLeft(), scrollPosition);
+
+        if (progress < 1) {
+            clearTimeout(scrollTimer);
+            setTimeout(scroll, 16);
         }
     };
     
-    getLeft = function () {
-        var doc = document.documentElement;
-        return (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
+    getViewLeft = function () {
+        return (window.pageXOffset || document.documentElement.scrollLeft) - (document.documentElement.clientLeft || 0);
     };
     
-    getTop = function () {
-        var doc = document.documentElement;
-        return (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+    getViewTop = function () {
+        return (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0);
     };
     
-    my.ScrollToElementById = function (elementId) {
-        var doc, element, bodyRect, maxScroll, viewHeight;
-            
-        bodyRect = document.body.getBoundingClientRect();
-        viewHeight = window.innerHeight || 0;
-        maxScroll = bodyRect.height - viewHeight;
+    my.scrollTo = function (elementId) {
+        var element, /* the element to scroll to */
+            bodyRect, /* bounding rectangle of the body element */
+            elementRect, /* bounding rectangle of the element to scroll to */
+            viewHeight, /* height of the visibile window */
+            scrollMaxY; /* maximum position to scroll to */
         
         element = document.getElementById(elementId);
-        doc = document.documentElement;
+        bodyRect = document.body.getBoundingClientRect();
+        elementRect = element.getBoundingClientRect();
+        viewHeight = window.innerHeight || 0;
+        scrollMaxY = bodyRect.height - viewHeight;
+        scrollStartY = getViewTop();
+        scrollStartTime = new Date().getTime();
         
-        scrollStart = getTop();
-        scrollTo = Math.max(0, Math.min(element.getBoundingClientRect().top - bodyRect.top, maxScroll));
-        scrollSpeed = Math.ceil(Math.abs(scrollTo - scrollStart) * 0.01);
+        scrollToY = Math.max(0, Math.min(scrollMaxY, elementRect.top - bodyRect.top));
         
-        clearTimeout(timer);
+        clearTimeout(scrollTimer);
         
-        performScroll();
+        scroll();
     };
     
     return my;
