@@ -1,7 +1,8 @@
+/*global document*/
 var Publications = (function () {
     "use strict";
     
-    var my = {}, Paper, Author, Link;
+    var my = {};
     
     my.Author = function (firstName, lastName, webPage) {
         this.firstName = firstName;
@@ -47,10 +48,17 @@ var Publications = (function () {
         data = document.createElement("div");
         data.className = "publication-data";
         
-        title = document.createElement("a");
-        title.href = this.projectPageLink;
-        title.className = "title";
-        title.innerHTML = this.title;
+        if (this.projectPageLink) {
+            title = document.createElement("a");
+            title.href = this.projectPageLink;
+            title.className = "title";
+            title.innerHTML = this.title;
+        } else {
+            title = document.createElement("p");
+            title.className = "title";
+            title.innerHTML = this.title;
+        }
+        
         
         authors = document.createElement("div");
         authors.className = "authors";
@@ -127,10 +135,10 @@ var phdniels = new Publications.Paper("Improving Efficiency in Illumination Algo
                                          "http://graphics.cs.kuleuven.be/publications/phdniels/index.html",
                                          [new Publications.Link("Project page", "http://graphics.cs.kuleuven.be/publications/phdniels/index.html", "images/icon_html.png"),
                                           new Publications.Link("Dissertation", "http://graphics.cs.kuleuven.be/publications/phdniels/files/dissertation-highquality.pdf", "images/icon_pdf.png"),
+                                          new Publications.Link("Presentation", "http://graphics.cs.kuleuven.be/publications/phdniels/files/presentation.pdf", "images/icon_pdf.png"),
                                           new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/phdniels/files/citation.bib", "images/icon_tex.png"),
                                           new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/phdniels/files/abstract.txt", "images/icon_txt.png"),
-                                          new Publications.Link("Lirias", "https://lirias.kuleuven.be/handle/123456789/600502", "images/icon_html.png"),
-                                          new Publications.Link("Presentation", "http://graphics.cs.kuleuven.be/publications/phdniels/files/presentation.pdf", "images/icon_pdf.png")]);
+                                          new Publications.Link("Lirias", "https://lirias.kuleuven.be/handle/123456789/600502", "images/icon_html.png")]);
 
 var BELD13PVEDI = new Publications.Paper("Probabilistic Visibility Evaluation for Direct Illumination",
                                          [Niels, Bjorn, Ares, Philip],
@@ -168,6 +176,7 @@ var MBD15EVHFKUTR = new Publications.Paper("Efficient visibility heuristics for 
                                             new Publications.Link("Presentation", "http://graphics.cs.kuleuven.be/publications/MBD15EVHFKUTR/MBD15EVHFKUTR_presentation.pdf", "images/icon_pdf.png"),
                                             new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/MBD15EVHFKUTR/MBD15EVHFKUTR_citation.bib", "images/icon_tex.png"),
                                             new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/MBD15EVHFKUTR/MBD15EVHFKUTR_abstract.txt", "images/icon_txt.png"),
+                                            new Publications.Link("Lirias", "https://lirias.kuleuven.be/handle/123456789/501514", "images/icon_html.png"),
                                             new Publications.Link("DOI", "https://dx.doi.org/10.2312/sre.20151164", "images/icon_html.png")]);
 
 var BD16VAUERC = new Publications.Paper("Visibility Acceleration using Efficient Ray Classification",
@@ -179,7 +188,8 @@ var BD16VAUERC = new Publications.Paper("Visibility Acceleration using Efficient
                                             new Publications.Link("Preprint", "http://graphics.cs.kuleuven.be/publications/BD16VAUERC/BD16VAUERC_paper.pdf", "images/icon_pdf.png"),
                                             new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/BD16VAUERC/BD16VAUERC_citation.bib", "images/icon_tex.png"),
                                             new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/BD16VAUERC/BD16VAUERC_abstract.txt", "images/icon_txt.png"),
-                                            new Publications.Link("Report page", "http://www.cs.kuleuven.be/publicaties/rapporten/cw/CW695.abs.html", "images/icon_html.png")]);
+                                            new Publications.Link("Report page", "http://www.cs.kuleuven.be/publicaties/rapporten/cw/CW695.abs.html", "images/icon_html.png"),
+                                            new Publications.Link("Lirias", "https://lirias.kuleuven.be/handle/123456789/539863", "images/icon_html.png")]);
 
 var BD2016LSFDI = new Publications.Paper("Line Sampling for Direct Illumination",
                                            [Niels, Philip],
@@ -188,8 +198,11 @@ var BD2016LSFDI = new Publications.Paper("Line Sampling for Direct Illumination"
                                            "http://graphics.cs.kuleuven.be/publications/BD2016LSFDI/index.html",
                                            [new Publications.Link("Project page", "http://graphics.cs.kuleuven.be/publications/BD2016LSFDI/index.html", "images/icon_html.png"),
                                             new Publications.Link("Preprint", "http://graphics.cs.kuleuven.be/publications/BD2016LSFDI/BD2016LSFDI_paper.pdf", "images/icon_pdf.png"),
+                                            new Publications.Link("Presentation", "http://graphics.cs.kuleuven.be/publications/BD2016LSFDI/BD2016LSFDI_presentation.pdf", "images/icon_pdf.png"),
                                             new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/BD2016LSFDI/BD2016LSFDI_citation.bib", "images/icon_tex.png"),
-                                            new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/BD2016LSFDI/BD2016LSFDI_abstract.txt", "images/icon_txt.png")]);
+                                            new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/BD2016LSFDI/BD2016LSFDI_abstract.txt", "images/icon_txt.png"),
+                                            new Publications.Link("Lirias", "https://lirias.kuleuven.be/handle/123456789/545093", "images/icon_html.png"),
+                                            new Publications.Link("DOI", "https://dx.doi.org/10.1111/cgf.12948", "images/icon_html.png")]);
 
 var WFBD2017TCFMLT = new Publications.Paper("Temporal Coherence for Metropolis Light Transport",
                                            [Joran, Roald, Niels, Philip],
@@ -198,22 +211,23 @@ var WFBD2017TCFMLT = new Publications.Paper("Temporal Coherence for Metropolis L
                                            "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/index.html",
                                            [new Publications.Link("Project page", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/index.html", "images/icon_html.png"),
                                             new Publications.Link("Paper", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/WFBD2017TCFMLT_paper.pdf", "images/icon_pdf.png"),
+                                            new Publications.Link("Presentation", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/WFBD2017TCFMLT_presentation.pdf", "images/icon_pdf.png"),
                                             new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/WFBD2017TCFMLT_citation.bib", "images/icon_tex.png"),
                                             new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/WFBD2017TCFMLT_abstract.txt", "images/icon_txt.png"),
-                                            new Publications.Link("Video", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/WFBD2017TCFMLT_video.mp4", "images/icon_video.png")]);
+                                            new Publications.Link("Video", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/WFBD2017TCFMLT_video.mp4", "images/icon_video.png"),
+                                            new Publications.Link("Lirias", "https://lirias.kuleuven.be/handle/123456789/586720", "images/icon_html.png"),
+                                            new Publications.Link("DOI", "https://dx.doi.org/10.2312/sre20171194", "images/icon_html.png")]);
 
-/*
-var phdniels = new Publications.Paper("Stochastische Visibiliteit in Rendering Algoritmen a.d.h.v. de occlusion map",
+var masterthesis = new Publications.Paper("Stochastische Visibiliteit in Rendering Algoritmen a.d.h.v. de occlusion map",
                                          [Niels],
                                          "Master thesis, Department of Computer Science, KU Leuven, Celestijnenlaan 200A, 3001 Heverlee, Belgium, June 2013.",
                                          "images/masters_thumbnail.jpg",
                                          undefined,
-                                          new Publications.Link("Dissertation", "http://graphics.cs.kuleuven.be/publications/phdniels/files/masterproef.pdf", "images/icon_pdf.png"),
-                                          new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/phdniels/files/citation.bib", "images/icon_tex.png"),
-                                          new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/phdniels/files/abstract.txt", "images/icon_txt.png"),
-                                          new Publications.Link("Lirias", "https://lirias.kuleuven.be/handle/123456789/600502", "images/icon_html.png"),
-                                          new Publications.Link("Presentation", "http://graphics.cs.kuleuven.be/publications/phdniels/files/presentation.pdf", "images/icon_pdf.png")]);
-*/
+                                         [new Publications.Link("Dissertation", "http://graphics.cs.kuleuven.be/publications/masterthesisniels/masterproef.pdf", "images/icon_pdf.png"),
+                                          new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/masterthesisniels/citation.bib", "images/icon_tex.png"),
+                                          new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/masterthesisniels/abstract.txt", "images/icon_txt.png"),
+                                          new Publications.Link("Presentation", "http://graphics.cs.kuleuven.be/publications/masterthesisniels/presentation.pdf", "images/icon_pdf.png")]);
+
 var publicationContainer = document.getElementById("publications-container");
 
 phdniels.add(publicationContainer);
@@ -223,4 +237,5 @@ BD16VAUERC.add(publicationContainer);
 MBD15EVHFKUTR.add(publicationContainer);
 BLD14PVEGP.add(publicationContainer);
 BELD13PVEDI.add(publicationContainer);
+masterthesis.add(publicationContainer);
 
