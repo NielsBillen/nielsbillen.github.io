@@ -1,5 +1,3 @@
-/*global console*/
-
 var Publications = (function () {
     "use strict";
     
@@ -122,6 +120,18 @@ var Bjorn = new Publications.Author("Bj&ouml;rn", "Engelen", null);
 var Roald = new Publications.Author("Roald", "Frederickx", "https://people.cs.kuleuven.be/~roald.frederickx/");
 var Joran = new Publications.Author("Joran", "Van de Woestijne", null);
 
+var phdniels = new Publications.Paper("Improving Efficiency in Illumination Algorithms using Stochastic Visibility Evaluation and Line Sampling",
+                                         [Niels],
+                                         "Ph.D thesis, Department of Computer Science, KU Leuven, Celestijnenlaan 200A, 3001 Heverlee, Belgium, February 2018.",
+                                         "images/phdniels_thumbnail.jpg",
+                                         "http://graphics.cs.kuleuven.be/publications/phdniels/index.html",
+                                         [new Publications.Link("Project page", "http://graphics.cs.kuleuven.be/publications/phdniels/index.html", "images/icon_html.png"),
+                                          new Publications.Link("Dissertation", "http://graphics.cs.kuleuven.be/publications/phdniels/files/dissertation-highquality.pdf", "images/icon_pdf.png"),
+                                          new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/phdniels/files/citation.bib", "images/icon_tex.png"),
+                                          new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/phdniels/files/abstract.txt", "images/icon_txt.png"),
+                                          new Publications.Link("Lirias", "https://lirias.kuleuven.be/handle/123456789/600502", "images/icon_html.png"),
+                                          new Publications.Link("Presentation", "http://graphics.cs.kuleuven.be/publications/phdniels/files/presentation.pdf", "images/icon_pdf.png")]);
+
 var BELD13PVEDI = new Publications.Paper("Probabilistic Visibility Evaluation for Direct Illumination",
                                          [Niels, Bjorn, Ares, Philip],
                                          "Computer Graphics Forum (Proceedings of the 24th Eurographics Symposium on Rendering), 32(4):39-47, July 2013.",
@@ -192,8 +202,21 @@ var WFBD2017TCFMLT = new Publications.Paper("Temporal Coherence for Metropolis L
                                             new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/WFBD2017TCFMLT_abstract.txt", "images/icon_txt.png"),
                                             new Publications.Link("Video", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/WFBD2017TCFMLT_video.mp4", "images/icon_video.png")]);
 
+/*
+var phdniels = new Publications.Paper("Stochastische Visibiliteit in Rendering Algoritmen a.d.h.v. de occlusion map",
+                                         [Niels],
+                                         "Master thesis, Department of Computer Science, KU Leuven, Celestijnenlaan 200A, 3001 Heverlee, Belgium, June 2013.",
+                                         "images/masters_thumbnail.jpg",
+                                         undefined,
+                                          new Publications.Link("Dissertation", "http://graphics.cs.kuleuven.be/publications/phdniels/files/masterproef.pdf", "images/icon_pdf.png"),
+                                          new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/phdniels/files/citation.bib", "images/icon_tex.png"),
+                                          new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/phdniels/files/abstract.txt", "images/icon_txt.png"),
+                                          new Publications.Link("Lirias", "https://lirias.kuleuven.be/handle/123456789/600502", "images/icon_html.png"),
+                                          new Publications.Link("Presentation", "http://graphics.cs.kuleuven.be/publications/phdniels/files/presentation.pdf", "images/icon_pdf.png")]);
+*/
 var publicationContainer = document.getElementById("publications-container");
 
+phdniels.add(publicationContainer);
 WFBD2017TCFMLT.add(publicationContainer);
 BD2016LSFDI.add(publicationContainer);
 BD16VAUERC.add(publicationContainer);
