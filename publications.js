@@ -1,31 +1,31 @@
 /*global document*/
 var Publications = (function () {
     "use strict";
-    
+
     var my = {};
-    
+
     my.Author = function (firstName, lastName, webPage) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.webPage = webPage;
     };
-    
+
     my.Author.prototype.toHTML = function () {
         var result = this.lastName + " " + this.firstName;
-        
+
         if (this.webPage) {
             return "<a class = 'author' href='" + this.webPage + "'>" + result + "</a>";
         } else {
             return result;
         }
     };
-    
+
     my.Link = function (title, link, icon) {
         this.title = title;
         this.link = link;
         this.icon = icon;
     };
-    
+
     my.Paper = function (title, authors, location, thumbnail, projectPageLink, links) {
         this.title = title;
         this.authors = authors;
@@ -34,20 +34,20 @@ var Publications = (function () {
         this.links = links;
         this.projectPageLink = projectPageLink;
     };
-    
+
     my.Paper.prototype.add = function (container) {
         var i, publication, aside, data, title, authors, author, location, link, links, linkElement, linkIcon, linkDescription;
-        
+
         publication = document.createElement("div");
         publication.className = "publication";
-        
+
         aside = document.createElement("aside");
         aside.className = "publication-thumbnail";
         aside.style.backgroundImage = "url(" + this.thumbnail + ")";
-        
+
         data = document.createElement("div");
         data.className = "publication-data";
-        
+
         if (this.projectPageLink) {
             title = document.createElement("a");
             title.href = this.projectPageLink;
@@ -58,65 +58,64 @@ var Publications = (function () {
             title.className = "title";
             title.innerHTML = this.title;
         }
-        
-        
+
         authors = document.createElement("div");
         authors.className = "authors";
-        
+
         for (i = 0; i < this.authors.length; i += 1) {
             author = document.createElement("span");
             author.className = "author";
             author.innerHTML = this.authors[i].toHTML();
             authors.appendChild(author);
-            
+
             if (i < this.authors.length - 2) {
                 authors.innerHTML += ", ";
             } else if (i < this.authors.length - 1) {
                 authors.innerHTML += " and ";
             }
         }
-        
+
         location = document.createElement("div");
         location.className = "location";
         location.innerHTML = this.location;
-        
+
         links = document.createElement("div");
         links.className = "links";
-        
+
         if (this.links) {
             for (i = 0; i < this.links.length; i += 1) {
                 link = this.links[i];
-                
+
                 linkElement = document.createElement("a");
                 linkElement.className = "link";
                 linkElement.href = link.link;
-                
+
                 linkIcon = document.createElement("img");
                 linkIcon.className = "link-icon";
                 linkIcon.src = link.icon;
-                
+
                 linkDescription = document.createElement("div");
                 linkDescription.className = "link-description";
                 linkDescription.innerHTML = link.title;
-                
+
                 linkElement.appendChild(linkIcon);
                 linkElement.appendChild(linkDescription);
 
                 links.appendChild(linkElement);
             }
         }
-        
+
         data.appendChild(title);
         data.appendChild(authors);
         data.appendChild(location);
         data.appendChild(links);
-        
+
         publication.appendChild(aside);
         publication.appendChild(data);
-        
+
         container.appendChild(publication);
     };
-    
+
     return my;
 }());
 
@@ -146,7 +145,7 @@ var BELD13PVEDI = new Publications.Paper("Probabilistic Visibility Evaluation fo
                                          "images/BELD13PVEDI_thumbnail.jpg",
                                          "http://graphics.cs.kuleuven.be/publications/BELD13PVEDI/index.html",
                                          [new Publications.Link("Project page", "http://graphics.cs.kuleuven.be/publications/BELD13PVEDI/index.html", "images/icon_html.png"),
-                                          new Publications.Link("Paper", "http://graphics.cs.kuleuven.be/publications/BELD13PVEDI/BELD13PVEDI_paper.pdf", "images/icon_pdf.png"),
+                                          new Publications.Link("Preprint", "http://graphics.cs.kuleuven.be/publications/BELD13PVEDI/BELD13PVEDI_paper.pdf", "images/icon_pdf.png"),
                                           new Publications.Link("Presentation", "http://graphics.cs.kuleuven.be/publications/BELD13PVEDI/BELD13PVEDI_presentation.pdf", "images/icon_pdf.png"),
                                           new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/BELD13PVEDI/BELD13PVEDI_citation.bib", "images/icon_tex.png"),
                                           new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/BELD13PVEDI/BELD13PVEDI_abstract.txt", "images/icon_txt.png"),
@@ -159,7 +158,7 @@ var BLD14PVEGP = new Publications.Paper("Probabilistic Visibility Evaluation usi
                                         "images/BLD14PVEGP_thumbnail.jpg",
                                         "http://graphics.cs.kuleuven.be/publications/BLD14PVEGP/index.html",
                                         [new Publications.Link("Project page", "http://graphics.cs.kuleuven.be/publications/BLD14PVEGP/index.html", "images/icon_html.png"),
-                                         new Publications.Link("Paper", "http://graphics.cs.kuleuven.be/publications/BLD14PVEGP/BLD14PVEGP_paper.pdf", "images/icon_pdf.png"),
+                                         new Publications.Link("Preprint", "http://graphics.cs.kuleuven.be/publications/BLD14PVEGP/BLD14PVEGP_paper.pdf", "images/icon_pdf.png"),
                                          new Publications.Link("Presentation", "http://graphics.cs.kuleuven.be/publications/BLD14PVEGP/BLD14PVEGP_presentation.pdf", "images/icon_pdf.png"),
                                          new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/BLD14PVEGP/BLD14PVEGP_citation.bib", "images/icon_tex.png"),
                                          new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/BLD14PVEGP/BLD14PVEGP_abstract.txt", "images/icon_txt.png"),
@@ -172,7 +171,7 @@ var MBD15EVHFKUTR = new Publications.Paper("Efficient visibility heuristics for 
                                            "images/MBD15EVHFKUTR_thumbnail.jpg",
                                            "http://graphics.cs.kuleuven.be/publications/MBD15EVHFKUTR/index.html",
                                            [new Publications.Link("Project page", "http://graphics.cs.kuleuven.be/publications/MBD15EVHFKUTR/index.html", "images/icon_html.png"),
-                                            new Publications.Link("Paper", "http://graphics.cs.kuleuven.be/publications/MBD15EVHFKUTR/MBD15EVHFKUTR_paper.pdf", "images/icon_pdf.png"),
+                                            new Publications.Link("Preprint", "http://graphics.cs.kuleuven.be/publications/MBD15EVHFKUTR/MBD15EVHFKUTR_paper.pdf", "images/icon_pdf.png"),
                                             new Publications.Link("Presentation", "http://graphics.cs.kuleuven.be/publications/MBD15EVHFKUTR/MBD15EVHFKUTR_presentation.pdf", "images/icon_pdf.png"),
                                             new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/MBD15EVHFKUTR/MBD15EVHFKUTR_citation.bib", "images/icon_tex.png"),
                                             new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/MBD15EVHFKUTR/MBD15EVHFKUTR_abstract.txt", "images/icon_txt.png"),
@@ -210,7 +209,7 @@ var WFBD2017TCFMLT = new Publications.Paper("Temporal Coherence for Metropolis L
                                            "images/WFBD2017TCFMLT_thumbnail.jpg",
                                            "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/index.html",
                                            [new Publications.Link("Project page", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/index.html", "images/icon_html.png"),
-                                            new Publications.Link("Paper", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/WFBD2017TCFMLT_paper.pdf", "images/icon_pdf.png"),
+                                            new Publications.Link("Preprint", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/WFBD2017TCFMLT_paper.pdf", "images/icon_pdf.png"),
                                             new Publications.Link("Presentation", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/WFBD2017TCFMLT_presentation.pdf", "images/icon_pdf.png"),
                                             new Publications.Link("Citation", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/WFBD2017TCFMLT_citation.bib", "images/icon_tex.png"),
                                             new Publications.Link("Abstract", "http://graphics.cs.kuleuven.be/publications/WFBD2017TCFMLT/WFBD2017TCFMLT_abstract.txt", "images/icon_txt.png"),
