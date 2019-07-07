@@ -120,12 +120,25 @@ var Publications = (function () {
 }());
 
 var Niels = new Publications.Author("Niels", "Billen", "http://nielsbillen.github.io/");
+var Pieter = new Publications.Author("Pieter", "Lietaert", null);
+var Sofie = new Publications.Author("Sofie", "Burggraeve", null);
 var Matthias = new Publications.Author("Matthias", "Moulin", "http://matt77hias.github.io/");
 var Ares = new Publications.Author("Ares", "Lagae", "http://people.cs.kuleuven.be/~ares.lagae/");
 var Philip = new Publications.Author("Philip", "Dutr&eacute;", "https://sites.google.com/site/philipdutre/");
 var Bjorn = new Publications.Author("Bj&ouml;rn", "Engelen", null);
 var Roald = new Publications.Author("Roald", "Frederickx", "https://people.cs.kuleuven.be/~roald.frederickx/");
 var Joran = new Publications.Author("Joran", "Van de Woestijne", null);
+
+var LBB2019MMACPCLO = new Publications.Paper("Model-based Multi-Attribute Collaborative Production Cell Layout Optimization",
+                                        [Pieter, Niels, Sofie],
+                                         "20th International Conference on Research and Education in Mechatronics (REM), pp. 1-7, June 2019, Wels, Austria.",
+                                         "images/LBB2019MMACPCLO_thumbnail.png",
+                                         "https://ieeexplore.ieee.org/abstract/document/8744136",
+                                         [new Publications.Link("IEEE Xplore", "https://ieeexplore.ieee.org/abstract/document/8744136", "images/icon_html.png"),
+                                          new Publications.Link("Preprint", "files/LBB2019MMACPCLO/preprint.pdf", "images/icon_pdf.png"),
+                                          new Publications.Link("Citation", "files/LBB2019MMACPCLO/citation.bib", "images/icon_tex.png"),
+                                          new Publications.Link("Abstract", "files/LBB2019MMACPCLO/abstract.txt", "images/icon_txt.png")
+                                         ]);
 
 var phdniels = new Publications.Paper("Improving Efficiency in Illumination Algorithms using Stochastic Visibility Evaluation and Line Sampling",
                                          [Niels],
@@ -229,6 +242,7 @@ var masterthesis = new Publications.Paper("Stochastische Visibiliteit in Renderi
 
 var publicationContainer = document.getElementById("publications-container");
 
+LBB2019MMACPCLO.add(publicationContainer);
 phdniels.add(publicationContainer);
 WFBD2017TCFMLT.add(publicationContainer);
 BD2016LSFDI.add(publicationContainer);
