@@ -44,6 +44,12 @@ var Publications = (function () {
         aside = document.createElement("aside");
         aside.className = "publication-thumbnail";
         aside.style.backgroundImage = "url(" + this.thumbnail + ")";
+        
+        const projectLink = this.projectPageLink;
+        aside.addEventListener('click', function () {
+            window.location.href = projectLink;
+        });
+        aside.style.cursor = "pointer";
 
         data = document.createElement("div");
         data.className = "publication-data";
